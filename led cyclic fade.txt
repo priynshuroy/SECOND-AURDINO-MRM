@@ -1,0 +1,19 @@
+int pin = 9;
+int bright = 0;
+int fade = 255;
+void setup()
+{
+  pinMode(9, OUTPUT);
+}
+
+void loop()
+{
+  for (bright=0;bright<=255;bright+=1){
+  analogWrite(9, bright);
+  delay(50);
+    for (fade=255;fade>=0;fade-=1){
+  analogWrite(9, fade);
+      delay(50);
+  }
+  }
+}
