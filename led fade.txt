@@ -1,0 +1,15 @@
+int pin = 9;
+int bright = 0;
+void setup()
+{
+  pinMode(9, OUTPUT);
+}
+
+void loop()
+{
+  for (bright=0;bright<=255;bright+=5){
+  analogWrite(9, bright);
+  delay(30);
+  analogWrite(9, LOW);
+  }
+}
